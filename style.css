@@ -1,0 +1,158 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #f0f4f9 0%, #d9e7fa 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.container-center {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2a5298;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  width: 100vw;
+  min-height: unset;
+  margin-top: 0;
+}
+
+.main-center {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.pesquisa-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #b0c4de;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.2s;
+  font-size: 1rem;
+  background: #fff;
+}
+
+input[type="text"]:focus {
+  border: 1.5px solid #2a5298;
+  background: #f5faff;
+}
+
+button {
+  padding: 10px 18px;
+  background: linear-gradient(90deg, #2a5298 0%, #1e3c72 100%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(42,82,152,0.08);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+#pesquisa {
+  width: 220px;
+  margin-bottom: 0;
+}
+
+#btnPesquisar, #mostrarUsuarios {
+  margin-bottom: 0;
+}
+
+ul#listaUsuarios {
+  max-width: 700px;
+  margin: 30px auto 0 auto;
+  padding: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(42,82,152,0.10);
+}
+
+ul#listaUsuarios li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e3eaf5;
+  transition: background 0.2s;
+  
+}
+
+ul#listaUsuarios li:last-child {
+  border-bottom: none;
+}
+
+ul#listaUsuarios li:hover {
+  background: #f0f4f9;
+}
+
+ul#listaUsuarios strong {
+  color: #2a5298;
+}
+
+ul#listaUsuarios button {
+  margin-left: 10px;
+  padding: 7px 14px;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%);
+  box-shadow: none;
+}
+
+ul#listaUsuarios button:hover {
+  background: linear-gradient(90deg, #ff5858 0%, #f857a6 100%);
+}
+
+.lista-center {
+  width: 100vw;
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  form, ul#listaUsuarios li, .pesquisa-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  ul#listaUsuarios {
+    max-width: 98vw;
+  }
+  h1 {
+    font-size: 1.3rem;
+    min-height: unset;
+  }
+  .container-center {
+    padding: 10px;
+  }
+} 
